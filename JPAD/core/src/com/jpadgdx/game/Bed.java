@@ -25,7 +25,7 @@ public class Bed implements Screen {
 		
 		this.game = gam;
 		
-		character = new Texture(Gdx.files.internal("sprites/128.png"));
+		character = new Texture(Gdx.files.internal("sprites/256.png"));
 		opening = Gdx.audio.newMusic(Gdx.files.internal("audio/opening.mp3"));
 		step = Gdx.audio.newSound(Gdx.files.internal("audio/step.mp3"));
 		opening.setLooping(true);
