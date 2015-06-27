@@ -39,8 +39,8 @@ public class Bed implements Screen {
 		container = new Rectangle();
 		container.x = 2;
 		container.y = 2;
-		container.width = 64;
-		container.height = 64;
+		container.width = 128;
+		container.height = 128;
 	}
 
 	@Override
@@ -91,12 +91,14 @@ public class Bed implements Screen {
 		camera.update();
 		
 		if(Gdx.input.isKeyPressed(Keys.LEFT)){
+			step.stop();
 			step.play();
 			container.x -= 200 * Gdx.graphics.getDeltaTime();
 			/*camera.position.set(container.x, container.y, 0);
 			camera.update();*/
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT)){
+			step.stop();
 			step.play();
 			container.x += 200 * Gdx.graphics.getDeltaTime();
 			/*camera.position.set(container.x, container.y, 0);
@@ -104,12 +106,12 @@ public class Bed implements Screen {
 		}
 		
 		if(container.x < 0) container.x = 0;
-	    if(container.x > 1024 - 64){
+	    if(container.x > 1024 - 128){
 	    	game.setScreen(new Life(game));
 	    	opening.stop();
 	    }
 	    if(container.y < 0) container.y = 0;
-	    if(container.y > 512 - 64) container.y = 512 - 64;
+	    if(container.y > 512 - 128) container.y = 512 - 128;
 	    
 	  /*  if (Gdx.input.isKeyPressed(Input.Keys.A)) {
 	        camera.zoom += 0.02;

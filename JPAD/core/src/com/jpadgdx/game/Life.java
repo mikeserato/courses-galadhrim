@@ -40,8 +40,8 @@ public class Life implements Screen {
 		container = new Rectangle();
 		container.x = 50;
 		container.y = 390;
-		container.width = 64;
-		container.height = 64;
+		container.width = 32;
+		container.height = 32;
 	}
 
 	@Override
@@ -119,9 +119,9 @@ public class Life implements Screen {
 		}
 		
 		if(container.x < 0) container.x = 0;
-	    if(container.x > 1024 - 64) container.x = 1024 - 64;
+	    if(container.x > 1024 - 32) container.x = 1024 - 32;
 	    if(container.y < 0) container.y = 0;
-	    if(container.y > 512 - 64) container.y = 512 - 64;
+	    if(container.y > 512 - 32) container.y = 512 - 32;
 	    if(container.x > 50 && container.x < 60 && container.y > 390){ 
 	    	game.setScreen(new Bed(game));
 	    	opening.stop();
