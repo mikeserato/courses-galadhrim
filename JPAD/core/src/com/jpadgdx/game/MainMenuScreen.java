@@ -36,7 +36,7 @@ public class MainMenuScreen implements Screen {
         game.batch.setProjectionMatrix(camera.combined);
 
         game.batch.begin();
-        game.font.draw(game.batch, "Sample Initial Main Screen", 300,350);
+        game.font.draw(game.batch, "Geeca has been here", 300,350);
         game.font.draw(game.batch, "Click anywhere to begin", 300, 300);
         game.batch.end();
 
