@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -18,9 +17,6 @@ public class MainMenuScreen implements Screen {
 	final StartLife game;
 
     OrthographicCamera camera;
-    
-    SpriteBatch batch;
-	Sprite img;
 	ImageButton startButton;
 	ImageButton exitButton;
 	Stage stage;
@@ -29,7 +25,6 @@ public class MainMenuScreen implements Screen {
     	
         game = gam;
         
-
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 1024, 512);
         
@@ -40,9 +35,9 @@ public class MainMenuScreen implements Screen {
     public void create(){
 
 		startButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("start.jpg"))), new SpriteDrawable(new Sprite(new Texture("start1.jpg"))));
-		stage = new Stage();
 		exitButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("exit.jpg"))), new SpriteDrawable(new Sprite(new Texture("exit1.jpg"))));
-        
+		stage = new Stage();
+		
 		startButton.setHeight(70);
 		startButton.setWidth(130);
 		startButton.setPosition(445, 150);
