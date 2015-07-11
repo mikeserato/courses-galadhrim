@@ -7,8 +7,10 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 
 public class MainMenuScreen implements Screen {
@@ -36,10 +38,7 @@ public class MainMenuScreen implements Screen {
     }
 
     public void create(){
-    	
-    	
-    	batch = new SpriteBatch();
-		img = new Sprite(new Texture("startBackground.jpg"));
+
 		startButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("start.jpg"))), new SpriteDrawable(new Sprite(new Texture("start1.jpg"))));
 		stage = new Stage();
 		exitButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("exit.jpg"))), new SpriteDrawable(new Sprite(new Texture("exit1.jpg"))));
@@ -50,6 +49,21 @@ public class MainMenuScreen implements Screen {
 		exitButton.setHeight(70);
 		exitButton.setWidth(130);
 		exitButton.setPosition(445, 50);
+		
+		startButton.addListener(new ClickListener(){
+			@Override
+			public void clicked(InputEvent event, float x, float y){
+				game.setScreen(new Bed(game));
+	            dispose();
+			}
+		});
+		
+		exitButton.addListener(new ClickListener(){
+			@Override
+			public void clicked(InputEvent event, float x, float y){
+				Gdx.app.exit();
+			}
+		});
 		
 		stage.addActor(startButton);
 		stage.addActor(exitButton);
@@ -72,14 +86,14 @@ public class MainMenuScreen implements Screen {
         camera.update();
         game.batch.setProjectionMatrix(camera.combined);
         
+        stage.getBatch().begin();
+		stage.getBatch().draw(new Texture("startBackground.jpg"), 0, 0);
+		stage.getBatch().end();
+        
+		stage.act();
         stage.draw();
         
-
-
-        if (Gdx.input.isTouched()) {
-            game.setScreen(new Bed(game));
-            dispose();
-        }
+        Gdx.input.setInputProcessor(stage);
 
 	}
 
@@ -110,7 +124,7 @@ public class MainMenuScreen implements Screen {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
-
+		stage.dispose();
 	}
 
 }
