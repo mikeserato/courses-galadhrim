@@ -1,0 +1,71 @@
+Game Events (please add or edit events)
+
+[GENERAL]
+
+1. Sleeping	
+	- adds 30 points or higher to the player's health
+	- accessible in the bedroom (bed)
+	- any time of the day
+	- consumes 1 turn
+
+2. Eating
+	- adds 5 points to the player's health
+	- accessible in SU building 
+	- any time of the day
+	- maximum of 3 charges per turn (charges shared by both players)
+
+3. Entering Restrooms
+	- either adds little health and luck to the player or just consumes 1 turn without any effect
+	- accessible in the bedroom (cr)
+	- any time of the day
+	- either consumes half of the player's turn or the whole turn
+
+4. Library
+	- adds 5 to 15 intelligence to the player or just consumes 1 turn without effect (low probability)
+	- accessible in the library
+	- triggered once the player enters the library
+	- any time of the day except late night
+	- consumes one turn
+
+5. Going to class
+	- adds intelligence but decreases health 
+	- The intelligence added is based on the current player's intelligence
+	- Any time of the day except Night onwards
+	- consumes one turn
+	- required at least once a day
+	- not going to class at least once a day for three times will give the player 1 DA
+
+6. GA
+	- vital in obtaining some Quest Events
+	- missing GA will result in 1 DA
+	- accessible during night time 
+	- consumes one turn
+
+7. Talking to non-YSER
+	- random effect
+
+8. Talking to YSERs
+	- triggers YSER-specific quest
+
+[QUESTS]
+
+1. Team Building
+	- triggered by attending at least one GA
+	- consumes 3 turns
+	- greatly increases org affection and some luck or intelligence randomly
+	- starts early morning till before night time
+
+2. PAD Session
+	- triggered every Fridays upon entering Bella Cartash (?) 
+	- accessible during night time
+	- greatly decreases health but gives minor increase in intelligence
+	- consumes one turn
+
+3. Job Fair
+	- LOLOLOL
+
+
+
+
+
+
