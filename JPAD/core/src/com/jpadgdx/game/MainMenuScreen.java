@@ -2,7 +2,6 @@ package com.jpadgdx.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -21,15 +20,14 @@ public class MainMenuScreen implements Screen {
 	ImageButton startButton;
 	ImageButton exitButton;
 	Stage stage;
-	Music opening;
     
     public MainMenuScreen(final StartLife gam) {
     	
         game = gam;
-        opening = Gdx.audio.newMusic(Gdx.files.internal("audio/start.mp3"));
+        
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 1024, 512);
-        opening.play();
+        
         create();
 
     }
@@ -50,8 +48,7 @@ public class MainMenuScreen implements Screen {
 		startButton.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y){
-				opening.stop();
-				game.setScreen(new Bed(game));
+				game.setScreen(new Intro(game));
 	            dispose();
 			}
 		});
@@ -122,7 +119,6 @@ public class MainMenuScreen implements Screen {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
-		opening.dispose();
 		stage.dispose();
 	}
 

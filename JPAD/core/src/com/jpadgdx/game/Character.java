@@ -7,6 +7,7 @@ public class Character{
 	private int luck;
 	private int score;
 	public String name;
+	int timeLeft;
 	
 	Character(int health, int intel, int luck, String name){
 		this.health = health;

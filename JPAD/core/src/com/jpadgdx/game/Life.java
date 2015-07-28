@@ -88,34 +88,29 @@ public class Life implements Screen {
 		game.batch.draw(bg, 0, 0);
 		game.batch.draw(character, container.x, container.y);
 		game.batch.end();
-		camera.position.set(container.x, container.y, 0);
-		camera.update();
+		
 		
 		if(Gdx.input.isKeyPressed(Keys.LEFT)){
 			step.play();
 			container.x -= 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT)){
 			step.play();
 			container.x += 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			
 		}
 		
 		if(Gdx.input.isKeyPressed(Keys.UP)){
 			step.play();
 			container.y += 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			
 		}
 		
 		if(Gdx.input.isKeyPressed(Keys.DOWN)){
 			step.play();
 			container.y -= 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			
 		}
 		
 		if(container.x < 0) container.x = 0;
@@ -125,13 +120,6 @@ public class Life implements Screen {
 	    if(container.x > 50 && container.x < 60 && container.y > 390){ 
 	    	game.setScreen(new Bed(game));
 	    	opening.stop();
-	    }
-	    
-	    if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-	        camera.zoom += 0.02;
-	    }
-	    if (Gdx.input.isKeyPressed(Input.Keys.Q)) {
-	        camera.zoom -= 0.02;
 	    }
 	    
 	}
