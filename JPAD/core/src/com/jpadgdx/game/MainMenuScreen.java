@@ -34,8 +34,8 @@ public class MainMenuScreen implements Screen {
 
     public void create(){
 
-		startButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("start.jpg"))), new SpriteDrawable(new Sprite(new Texture("start1.jpg"))));
-		exitButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("exit.jpg"))), new SpriteDrawable(new Sprite(new Texture("exit1.jpg"))));
+		startButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("start/start.jpg"))), new SpriteDrawable(new Sprite(new Texture("start/start1.jpg"))));
+		exitButton = new ImageButton(new SpriteDrawable(new Sprite(new Texture("start/exit.jpg"))), new SpriteDrawable(new Sprite(new Texture("start/exit1.jpg"))));
 		stage = new Stage();
 		
 		startButton.setHeight(70);
@@ -82,7 +82,7 @@ public class MainMenuScreen implements Screen {
         game.batch.setProjectionMatrix(camera.combined);
         
         stage.getBatch().begin();
-		stage.getBatch().draw(new Texture("startBackground.jpg"), 0, 0);
+		stage.getBatch().draw(new Texture("start/startBackground.jpg"), 0, 0);
 		stage.getBatch().end();
         
 		stage.act();

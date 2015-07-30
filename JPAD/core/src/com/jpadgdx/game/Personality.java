@@ -12,18 +12,19 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 
-public class Gender implements Screen {
+public class Personality implements Screen {
 	
 		final StartLife game;
 
 	    OrthographicCamera camera;
-		ImageButton male;
-		ImageButton female;
+		ImageButton ath;
+		ImageButton cha;
+		ImageButton intel;
 		Stage stage;
 		Texture player;
 		int turn = 1;
 	    
-	    public Gender(final StartLife gam) {
+	    public Personality(final StartLife gam) {
 	    	
 	        game = gam;
 	        
@@ -38,18 +39,22 @@ public class Gender implements Screen {
 	    	
 	    	player = new Texture(Gdx.files.internal("character creation/player1.png"));
 
-			male = new ImageButton(new SpriteDrawable(new Sprite(new Texture("character creation/male.png"))), new SpriteDrawable(new Sprite(new Texture("character creation/male2.png"))));
-			female = new ImageButton(new SpriteDrawable(new Sprite(new Texture("character creation/female.png"))), new SpriteDrawable(new Sprite(new Texture("character creation/female2.png"))));
+			ath = new ImageButton(new SpriteDrawable(new Sprite(new Texture("personality/athletic.jpg"))), new SpriteDrawable(new Sprite(new Texture("personality/athletic2.jpg"))));
+			cha = new ImageButton(new SpriteDrawable(new Sprite(new Texture("personality/charismatic.jpg"))), new SpriteDrawable(new Sprite(new Texture("personality/charismatic2.jpg"))));
+			intel = new ImageButton(new SpriteDrawable(new Sprite(new Texture("personality/intelligent.jpg"))), new SpriteDrawable(new Sprite(new Texture("personality/intelligent2.jpg"))));
 			stage = new Stage();
 			
-			male.setHeight(200);
-			male.setWidth(200);
-			male.setPosition(300, 150);
-			female.setHeight(200);
-			female.setWidth(200);
-			female.setPosition(500, 150);
+			ath.setHeight(300);
+			ath.setWidth(300);
+			ath.setPosition(70, 100);
+			cha.setHeight(300);
+			cha.setWidth(300);
+			cha.setPosition(370, 100);
+			intel.setHeight(300);
+			intel.setWidth(300);
+			intel.setPosition(665, 100);
 			
-			male.addListener(new ClickListener(){
+			ath.addListener(new ClickListener(){
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn == 1){
@@ -57,13 +62,13 @@ public class Gender implements Screen {
 						turn++;
 					}
 					else{
-						game.setScreen(new Personality(game));
+						game.setScreen(new Intro(game));
 			            dispose();
 					}
 				}
 			});
 			
-			female.addListener(new ClickListener(){
+			cha.addListener(new ClickListener(){
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn==1){
@@ -77,8 +82,23 @@ public class Gender implements Screen {
 				}
 			});
 			
-			stage.addActor(male);
-			stage.addActor(female);
+			intel.addListener(new ClickListener(){
+				@Override
+				public void clicked(InputEvent event, float x, float y){
+					if(turn==1){
+						player = new Texture(Gdx.files.internal("character creation/player2.png"));
+						turn++;
+					}
+					else{
+						game.setScreen(new Intro(game));
+			            dispose();
+					}
+				}
+			});
+			
+			stage.addActor(ath);
+			stage.addActor(cha);
+			stage.addActor(intel);
 			
 	    }
 	    
@@ -100,7 +120,7 @@ public class Gender implements Screen {
 	        game.batch.setProjectionMatrix(camera.combined);
 	        
 	        stage.getBatch().begin();
-			stage.getBatch().draw(new Texture("character creation/bgMF.png"), 0, 0);
+			stage.getBatch().draw(new Texture("personality/background.png"), 0, 0);
 			stage.getBatch().draw(player, 0, 0);
 			stage.getBatch().end();
 	        
