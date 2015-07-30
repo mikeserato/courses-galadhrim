@@ -6,7 +6,6 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 
 public class TurnStart implements Screen {
@@ -68,6 +67,7 @@ public class TurnStart implements Screen {
 	        game.font.draw(game.batch,turn, 10, 500);
 	        game.font.draw(game.batch, "Press ENTER to stop", 490, 300);
 	        game.font.draw(game.batch, rand, 512, 256);
+	        game.batch.end();
 	        
 	        if(Gdx.input.isKeyPressed(Keys.ENTER)){
 	        	try {
@@ -79,7 +79,6 @@ public class TurnStart implements Screen {
 	        	game.setScreen(new Bed(game));
 	            dispose();
 	        }
-	        game.batch.end();
 	}
 
 	@Override

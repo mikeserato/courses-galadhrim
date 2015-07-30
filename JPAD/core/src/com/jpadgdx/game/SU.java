@@ -1,16 +1,16 @@
 package com.jpadgdx.game;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 
-public class Bed implements Screen {
-	
+public class SU implements Screen {
+
 	final StartLife game;
 	private Music opening;
 	private Sound step;
@@ -19,7 +19,7 @@ public class Bed implements Screen {
 	public Character player;
 	
 	
-	public  Bed (final StartLife gam) {
+	public  SU (final StartLife gam) {
 		
 		this.game = gam;
 		opening = Gdx.audio.newMusic(Gdx.files.internal("audio/opening.mp3"));
@@ -27,7 +27,7 @@ public class Bed implements Screen {
 		opening.setLooping(true);
 		opening.play();
 		
-		bg = new Texture(Gdx.files.internal("maps/bedroom.jpg"));
+		bg = new Texture(Gdx.files.internal("maps/SU.jpg"));
 		
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 1024, 512);
