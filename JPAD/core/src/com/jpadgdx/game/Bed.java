@@ -8,24 +8,20 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.Rectangle;
 
 public class Bed implements Screen {
 	
 	final StartLife game;
-	
 	private Music opening;
 	private Sound step;
 	private OrthographicCamera camera;
-	private Texture character;
-	private Rectangle container;
 	private Texture bg;
+	public Character player;
+	
 	
 	public  Bed (final StartLife gam) {
 		
 		this.game = gam;
-		
-		character = new Texture(Gdx.files.internal("sprites/256.png"));
 		opening = Gdx.audio.newMusic(Gdx.files.internal("audio/opening.mp3"));
 		step = Gdx.audio.newSound(Gdx.files.internal("audio/step.mp3"));
 		opening.setLooping(true);
@@ -36,11 +32,10 @@ public class Bed implements Screen {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 1024, 512);
 		
-		container = new Rectangle();
-		container.x = 2;
-		container.y = 2;
-		container.width = 128;
-		container.height = 128;
+		player = new Character(10,10,10,"Player 1",false);
+		
+		
+	
 	}
 
 	@Override
@@ -65,7 +60,6 @@ public class Bed implements Screen {
 	public void dispose() {
 		// TODO Auto-generated method stub
 		opening.dispose();
-		character.dispose();
 		step.dispose();
 		bg.dispose();
 		
@@ -85,7 +79,7 @@ public class Bed implements Screen {
 		game.batch.setProjectionMatrix(camera.combined);
 		game.batch.begin();
 		game.batch.draw(bg, 0, 0);
-		game.batch.draw(character, container.x, container.y);
+		game.batch.draw(player.character, player.x, player.y);
 		game.batch.end();
 		//camera.position.set(container.x, container.y, 0);
 		camera.update();
@@ -93,25 +87,26 @@ public class Bed implements Screen {
 		if(Gdx.input.isKeyPressed(Keys.LEFT)){
 			step.stop();
 			step.play();
-			container.x -= 200 * Gdx.graphics.getDeltaTime();
+			player.x -= 200 * Gdx.graphics.getDeltaTime();
 			/*camera.position.set(container.x, container.y, 0);
 			camera.update();*/
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT)){
 			step.stop();
 			step.play();
-			container.x += 200 * Gdx.graphics.getDeltaTime();
+			player.x += 200 * Gdx.graphics.getDeltaTime();
 			/*camera.position.set(container.x, container.y, 0);
 			camera.update();*/
 		}
 		
-		if(container.x < 0) container.x = 0;
-	    if(container.x > 1024 - 128){
-	    	game.setScreen(new Life(game));
+		if(player.x < 0) player.x = 0;
+	    if(player.x > 1024 - 128){
 	    	opening.stop();
+	    	game.setScreen(new Life(game));
+	    	dispose();
 	    }
-	    if(container.y < 0) container.y = 0;
-	    if(container.y > 512 - 128) container.y = 512 - 128;
+	    if(player.y < 0) player.y = 0;
+	    if(player.y > 512 - 128) player.y = 512 - 128;
 	    
 	  /*  if (Gdx.input.isKeyPressed(Input.Keys.A)) {
 	        camera.zoom += 0.02;

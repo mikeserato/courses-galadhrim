@@ -1,7 +1,6 @@
 package com.jpadgdx.game;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
@@ -18,15 +17,20 @@ public class Life implements Screen {
 	private Music opening;
 	private Sound step;
 	private OrthographicCamera camera;
-	private Texture character;
-	private Rectangle container;
+	public Character player;
 	private Texture bg;
+	private Rectangle dorm;
+	private Rectangle physci;
+	private Rectangle su; 
+	private Rectangle hum;
+	private Rectangle fpark;
+	
+	Texture pic;
 	
 	public  Life (final StartLife gam) {
 		
 		this.game = gam;
 		
-		character = new Texture(Gdx.files.internal("sprites/32.png"));
 		opening = Gdx.audio.newMusic(Gdx.files.internal("audio/mapBG.mp3"));
 		step = Gdx.audio.newSound(Gdx.files.internal("audio/step.mp3"));
 		opening.setLooping(true);
@@ -37,11 +41,39 @@ public class Life implements Screen {
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 1024, 512);
 		
-		container = new Rectangle();
-		container.x = 50;
-		container.y = 390;
-		container.width = 32;
-		container.height = 32;
+		player = new Character(10,10,10,"Player 1",true);
+		
+		dorm = new Rectangle();
+		dorm.x = 35;
+		dorm.y = 402;
+		dorm.height = 98;
+		dorm.width = 160;
+		
+		physci = new Rectangle();
+		physci.x = 155;
+		physci.y = 46;
+		physci.height = 98;
+		physci.width = 160;
+		
+		fpark = new Rectangle();
+		fpark.x = 517;
+		fpark.y = 252;
+		fpark.height = 98;
+		fpark.width = 160;
+		
+		hum = new Rectangle();
+		hum.x = 835;
+		hum.y = 97;
+		hum.height = 98;
+		hum.width = 160;
+		
+		su = new Rectangle();
+		su.x = 765;
+		su.y = 382;
+		su.height = 98;
+		su.width = 160;
+				
+		
 	}
 
 	@Override
@@ -66,7 +98,6 @@ public class Life implements Screen {
 	public void dispose() {
 		// TODO Auto-generated method stub
 		opening.dispose();
-		character.dispose();
 		step.dispose();
 		bg.dispose();
 		
@@ -86,53 +117,141 @@ public class Life implements Screen {
 		game.batch.setProjectionMatrix(camera.combined);
 		game.batch.begin();
 		game.batch.draw(bg, 0, 0);
-		game.batch.draw(character, container.x, container.y);
+		game.batch.draw(player.character, player.x, player.y);
 		game.batch.end();
-		camera.position.set(container.x, container.y, 0);
-		camera.update();
+		
 		
 		if(Gdx.input.isKeyPressed(Keys.LEFT)){
 			step.play();
-			container.x -= 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			if(player.overlaps(dorm)){
+				opening.stop();
+				game.setScreen(new Bed(game));
+				dispose();
+			}
+			else if(player.overlaps(physci)){
+				opening.stop();
+				game.setScreen(new Physci(game));
+				dispose();
+			}
+			else if(player.overlaps(su)){
+				opening.stop();
+				game.setScreen(new SU(game));
+				dispose();
+			}
+			else if(player.overlaps(hum)){
+				opening.stop();
+				game.setScreen(new Hum(game));
+				dispose();
+			}
+			else if(player.overlaps(fpark)){
+				opening.stop();
+				game.setScreen(new FPark(game));
+				dispose();
+			}
+			else
+				player.x -= 200 * Gdx.graphics.getDeltaTime();
+			
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT)){
-			step.play();
-			container.x += 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			if(player.overlaps(dorm)){
+				opening.stop();
+				game.setScreen(new Bed(game));
+				dispose();
+			}
+			else if(player.overlaps(physci)){
+				opening.stop();
+				game.setScreen(new Physci(game));
+				dispose();
+			}
+			else if(player.overlaps(su)){
+				opening.stop();
+				game.setScreen(new SU(game));
+				dispose();
+			}
+			else if(player.overlaps(hum)){
+				opening.stop();
+				game.setScreen(new Hum(game));
+				dispose();
+			}
+			else if(player.overlaps(fpark)){
+				opening.stop();
+				game.setScreen(new FPark(game));
+				dispose();
+			}
+				
+			else
+				player.x += 200 * Gdx.graphics.getDeltaTime();
 		}
 		
 		if(Gdx.input.isKeyPressed(Keys.UP)){
 			step.play();
-			container.y += 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			if(player.overlaps(dorm)){
+				opening.stop();
+				game.setScreen(new Bed(game));
+				dispose();
+			}
+			else if(player.overlaps(physci)){
+				opening.stop();
+				game.setScreen(new Physci(game));
+				dispose();
+			}
+			else if(player.overlaps(su)){
+				opening.stop();
+				game.setScreen(new SU(game));
+				dispose();
+			}
+			else if(player.overlaps(hum)){
+				opening.stop();
+				game.setScreen(new Hum(game));
+				dispose();
+			}
+			else if(player.overlaps(fpark)){
+				opening.stop();
+				game.setScreen(new FPark(game));
+				dispose();
+			}
+			else
+				player.y += 200 * Gdx.graphics.getDeltaTime();
+			
 		}
 		
 		if(Gdx.input.isKeyPressed(Keys.DOWN)){
 			step.play();
-			container.y -= 200 * Gdx.graphics.getDeltaTime();
-			camera.position.set(container.x, container.y, 0);
-			camera.update();
+			if(player.overlaps(dorm)){
+				opening.stop();
+				game.setScreen(new Bed(game));
+				dispose();
+			}
+			else if(player.overlaps(physci)){
+				opening.stop();
+				game.setScreen(new Physci(game));
+				dispose();
+			}
+			else if(player.overlaps(su)){
+				opening.stop();
+				game.setScreen(new SU(game));
+				dispose();
+			}
+			else if(player.overlaps(hum)){
+				opening.stop();
+				game.setScreen(new Hum(game));
+				dispose();
+			}
+			else if(player.overlaps(fpark)){
+				opening.stop();
+				game.setScreen(new FPark(game));
+				dispose();
+			}
+			else
+				player.y -= 200 * Gdx.graphics.getDeltaTime();
+			
+			
 		}
 		
-		if(container.x < 0) container.x = 0;
-	    if(container.x > 1024 - 32) container.x = 1024 - 32;
-	    if(container.y < 0) container.y = 0;
-	    if(container.y > 512 - 32) container.y = 512 - 32;
-	    if(container.x > 50 && container.x < 60 && container.y > 390){ 
-	    	game.setScreen(new Bed(game));
-	    	opening.stop();
-	    }
-	    
-	    if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-	        camera.zoom += 0.02;
-	    }
-	    if (Gdx.input.isKeyPressed(Input.Keys.Q)) {
-	        camera.zoom -= 0.02;
-	    }
+		if(player.x < 20) player.x = 20;
+	    if(player.x > 1004 - 32) player.x = 1004 - 32;
+	    if(player.y < 20) player.y = 20;
+	    if(player.y > 492 - 32) player.y = 492 - 32;
 	    
 	}
 
@@ -141,4 +260,6 @@ public class Life implements Screen {
 		// TODO Auto-generated method stub
 		opening.play();
 	}
+		
+	
 }

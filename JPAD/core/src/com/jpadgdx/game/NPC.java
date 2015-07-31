@@ -12,6 +12,10 @@ public class NPC {
 		//insert dialogue here
 	}
 	
+	public String returnName(){
+		return name;
+	}
+	
 	public void quest(){
 		//Event something = new Event(int, int, int,int);
 	}

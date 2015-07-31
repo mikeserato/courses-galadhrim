@@ -5,13 +5,13 @@ public class Event {
 	private int changeHealth;
 	private int changeLuck;
 	private int changeIntel;
-	private int probability;
+//	private int probability;
 	
 	Event(int changeHealth, int changeLuck, int changeIntel, int probability){
 		this.changeHealth = changeHealth;
 		this.changeIntel = changeIntel;
 		this.changeLuck = changeLuck;
-		this.probability = probability;
+//		this.probability = probability;
 	}
 	
 	public void actionPerformed(Character player){
@@ -23,5 +23,6 @@ public class Event {
 	public void trigger(Character player){
 		//insert probability computation blah blah
 		actionPerformed(player);
+		
 	}
 }
