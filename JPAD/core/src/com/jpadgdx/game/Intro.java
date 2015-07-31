@@ -15,10 +15,15 @@ public class Intro implements Screen {
 	private OrthographicCamera camera;
 	private Texture bg;
 	int currentScreen = 1;
+	Character p1;
+	Character p2;
 	
-	public Intro(final StartLife gam){
+	public Intro(final StartLife gam, Character p1, Character p2){
 		
 		this.game = gam;
+		
+		this.p1 = p1;
+		this.p2 = p2;
 		
 		bg = new Texture(Gdx.files.internal("intro/1.jpg"));
 		
@@ -86,11 +91,11 @@ public class Intro implements Screen {
 				currentScreen++;
 			}
 			else if(currentScreen == 7){
-				game.setScreen(new TurnStart(game));
+				game.setScreen(new TurnStart(game,p1,p2));
 	            dispose();
 	            currentScreen++;
 			}
-			System.out.println(currentScreen);
+			
 	     }
 	}
 

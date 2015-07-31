@@ -22,6 +22,9 @@ public class Gender implements Screen {
 		Stage stage;
 		Texture player;
 		int turn = 1;
+		Character player1;
+		Character player2;
+		
 	    
 	    public Gender(final StartLife gam) {
 	    	
@@ -53,11 +56,13 @@ public class Gender implements Screen {
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn == 1){
+						player1 = new Character(1);
 						player = new Texture(Gdx.files.internal("character creation/player2.png"));
 						turn++;
 					}
 					else{
-						game.setScreen(new Personality(game));
+						player2 = new Character(1);
+						game.setScreen(new Personality(game,player1,player2));
 			            dispose();
 					}
 				}
@@ -67,11 +72,13 @@ public class Gender implements Screen {
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn==1){
+						player1 = new Character(2);
 						player = new Texture(Gdx.files.internal("character creation/player2.png"));
 						turn++;
 					}
 					else{
-						game.setScreen(new Intro(game));
+						player2 = new Character(2);
+						game.setScreen(new Personality(game,player1,player2));
 			            dispose();
 					}
 				}
