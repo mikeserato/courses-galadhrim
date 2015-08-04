@@ -23,10 +23,17 @@ public class Personality implements Screen {
 		Stage stage;
 		Texture player;
 		int turn = 1;
+		Character player1;
+		Character player2;
+		Character p1;
+		Character p2;
 	    
-	    public Personality(final StartLife gam) {
+	    public Personality(final StartLife gam, Character player1, Character player2) {
 	    	
 	        game = gam;
+	        
+	        this.player1 = player1;
+	        this.player2 = player2;
 	        
 	        camera = new OrthographicCamera();
 	        camera.setToOrtho(false, 1024, 512);
@@ -58,11 +65,13 @@ public class Personality implements Screen {
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn == 1){
+						p1 = new Character(10,5,5,"player 1", player1.gender);
 						player = new Texture(Gdx.files.internal("character creation/player2.png"));
 						turn++;
 					}
 					else{
-						game.setScreen(new Intro(game));
+						p2 = new Character(10,5,5,"player 2", player2.gender);
+						game.setScreen(new Intro(game,p1,p2));
 			            dispose();
 					}
 				}
@@ -72,11 +81,13 @@ public class Personality implements Screen {
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn==1){
+						p1 = new Character(5,5,10,"player 1", player1.gender);
 						player = new Texture(Gdx.files.internal("character creation/player2.png"));
 						turn++;
 					}
 					else{
-						game.setScreen(new Intro(game));
+						p2= new Character(5,5,10,"player 2", player2.gender);
+						game.setScreen(new Intro(game,p1,p2));
 			            dispose();
 					}
 				}
@@ -86,11 +97,13 @@ public class Personality implements Screen {
 				@Override
 				public void clicked(InputEvent event, float x, float y){
 					if(turn==1){
+						p1 = new Character(5,10,5,"player 1", player1.gender);
 						player = new Texture(Gdx.files.internal("character creation/player2.png"));
 						turn++;
 					}
 					else{
-						game.setScreen(new Intro(game));
+						p2 = new Character(5,10,5,"player 2", player2.gender);
+						game.setScreen(new Intro(game,p1,p2));
 			            dispose();
 					}
 				}

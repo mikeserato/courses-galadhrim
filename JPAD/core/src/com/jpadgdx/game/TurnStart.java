@@ -10,25 +10,30 @@ import com.badlogic.gdx.math.MathUtils;
 
 public class TurnStart implements Screen {
 	
-	int player1Turn;
-	int player2Turn;
-	String turn;
-	int day;
+	static int turn = 1;
+	static int day = 1;
 	final StartLife game;
 	private OrthographicCamera camera;
 	private int randomNumber;
 	private Sound step;
-	
+	boolean pressed = false;
 	String rand;
 	String dayString;
+	String player;
+	Character p1;
+	Character p2;
 	
-	public TurnStart(final StartLife gam){
+	public TurnStart(final StartLife gam, Character p1, Character p2){
+		
+		this.p1 = p1;
+		this.p2 = p2;
+		
 		this.game = gam;
+		
 		step = Gdx.audio.newSound(Gdx.files.internal("audio/step.mp3"));
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 1024, 512);
-		turn = "Player 1";
-		day = 1;
+		
 	}
 
 	@Override
@@ -59,25 +64,47 @@ public class TurnStart implements Screen {
         if(day == 7)
         	dayString = "Sunday";
         
-	    	randomNumber = MathUtils.random(10,20);
-	        rand = Integer.toString(randomNumber);
-	        game.batch.begin();
-	        step.play();
-	        game.font.draw(game.batch,dayString , 970, 500);
-	        game.font.draw(game.batch,turn, 10, 500);
-	        game.font.draw(game.batch, "Press ENTER to stop", 490, 300);
-	        game.font.draw(game.batch, rand, 512, 256);
-	        game.batch.end();
-	        
-	        if(Gdx.input.isKeyPressed(Keys.ENTER)){
-	        	try {
+        if(turn == 1)
+        	player = "Player 1";
+        if(turn == 2)
+        	player = "Player 2";
+        
+        if(pressed){
+        	if(turn == 1){
+        		p1.timeLeft = randomNumber * 100;
+        		try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	        	game.setScreen(new Bed(game));
+        		game.setScreen(new Bed(game,p1,p2));
 	            dispose();
+        	}
+        	if(turn == 2){
+        		p2.timeLeft = randomNumber * 100;
+        		try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+        		game.setScreen(new Bed(game,p1,p2));
+	            dispose();
+        	}
+        }
+        	
+	        randomNumber = MathUtils.random(10,20);
+	        rand = Integer.toString(randomNumber);
+	        game.batch.begin();
+	        game.font.draw(game.batch,dayString , 930, 500);
+	        game.font.draw(game.batch,player, 10, 500);
+	        game.font.draw(game.batch, "Press ENTER to stop", 460, 300);
+	        game.font.draw(game.batch, rand, 512, 256);
+	        game.batch.end();
+	        
+	        if(Gdx.input.isKeyPressed(Keys.ENTER)){
+		          	pressed = true;
 	        }
 	}
 
