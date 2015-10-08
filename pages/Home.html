@@ -15,6 +15,13 @@
 	</head>
 	<body>
 		
+		<table style="display:none;">
+			<tr>
+				<td id="username"> Doge Dogeson </td>
+				<td id="userhandle"> @WowSoPunny </td>
+			</tr>
+		</table>
+		
 		<div class="navbar-fixed">
 			<nav class="green lighten-4 navbar">
 				<div class="container">
@@ -76,7 +83,7 @@
 									<li><a href="#"> Log out </a></li>
 								</ul>
 						</li>
-						<li><a class="waves-effect waves-light btn green lighten-1">Leafit <span class="glyphicon glyphicon-edit"></span></a></li>
+						<li><a class="waves-effect waves-light btn green lighten-1" id="postBtn">Leafit <span class="glyphicon glyphicon-edit"></span></a></li>
 					  </ul>
 					  <ul class="side-nav" id="mobile-demo">
 						<li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
@@ -104,7 +111,7 @@
 								<div class="col s2 m2">
 									<img src="../resources/images/dog.jpg">
 								</div>
-								<div class="col s8 m8 offset-s2 offset-m2"> 
+								<div class="col s8 m8 offset-s2 offset-m2" id="info"> 
 									<h4 class="blue-grey-text text-darken-4 flow-text"><b>Doge Dogeson</b></h4>
 									<h6 class="blue-grey-text text-darken-4 flow-text">@WowSoPunny</h6>
 								</div>
@@ -179,8 +186,11 @@
 											<img src="../resources/images/dog.jpg" alt="IMAGE">
 										</div>
 										<div class="input-field col s10" id="leafbar-info">
-											<input placeholder="What's happening?" type="text" class="validate green lighten-4">
+											<input id="post" placeholder="What's happening?" type="textbox" class="validate green lighten-4" maxlength= "140">
 										</div>
+									</div>
+									<div id="hidden">
+										<a class="waves-effect waves-light btn green lighten-4 blue-grey-text text-darken-4" id="postBtn" style="left: 400px; bottom: 15px;">Leafit <span class="glyphicon glyphicon-edit"></span></a>
 									</div>
 								</form>
 							</div>
@@ -188,171 +198,11 @@
 						
 						<!-- Hardcoded Tweets --> 
 						<div class="card-panel green lighten-4"> 
-							<ul class="collection">
+							<ul class="collection" id="leaves">
 								<li class="collection-item avatar green lighten-4">
 									<img src="../resources/images/dog.jpg" class="circle">
 									<span class="title"><b>Doge Dogeson</b>@WowSoPunny</span>
-									<p>Got no nachos? I guess it's nacho lucky day!<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/001.jpg" class="circle">
-									<span class="title"><b>megabitch</b>@megan_marie0</span>
-									<p>ignore ignore ignore ignore ignore<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/002.jpg" class="circle">
-									<span class="title"><b>jessica</b>@oxissej</span>
-									<p>shit doesn't even matter anymore<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/dog.jpg" class="circle">
-									<span class="title"><b>Doge Dogeson</b>@WowSoPunny</span>
-									<p>How does NASA organize a party? They planet!<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/003.jpg" class="circle">
-									<span class="title"><b>BaseballDo</b>@BaseballDo</span>
-									<p>I'd go ahead and walk Montero too.<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/004.jpg" class="circle">
-									<span class="title"><b>tara macl(g)ay //33</b>@hemmostequila</span>
-									<p>i get a little broken over you<br/><br/>
+									<p>Welcome to Leafer! Have fun using the app!<br/><br/>
 										<table class="info">
 											<tbody>
 												<tr>
@@ -437,11 +287,52 @@
 						
 						<!-- Masthead Panel -->
 						<div class="card green lighten-4  hide_on-large-only hide-on-med-only">
-							<p id="masthead">2015 Leafer ACSS Exercise</p>
+							<p id="masthead">2015 Leafer 127 Project</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
+		<script>
+			$(document).ready(function(){
+				$('#hidden').hide();
+				$("#postBtn").click(function postLeaf(){
+					var counter = $('#leaves').length;
+					console.log(counter);
+					var src = "../resources/images/dog.jpg";
+					var id = "tweet"+(counter+1);
+					var name = $('#username').text(); //Gets Name of the user\
+					var handle = $('#userhandle').text(); //Gets handle of the user
+					var leaf = $('li:last').clone();
+					console.log(leaf);
+					var leafMsg = $('#post').val();
+					
+					leaf.find('li:first').attr('id', id);
+					leaf.find('img:first').attr('src', src);
+					leaf.find('span:first').addClass('title').html("<b>"+name+"</b>"+handle);
+					leaf.find('p:first').html(leafMsg + "<br/><br/>");
+					leaf.find('table:first');
+					leaf.prependTo('#leaves');
+					
+				});
+				$('#post').focus(function(){
+					$('.leafbar').animate({height:180},500,function(){})
+					$('#hidden').show();
+					/*.append("<input/>")
+					.attr({
+						'id': 'leafbutton'
+						'type': 'submit',
+						'value': 'submit',
+						'onclick': 'postLeaf()'
+					})*/;
+					$(this).animate({height:110},500,function(){});
+				}).blur(function(){
+					$('.leafbar').animate({height:50},500,function(){});
+					$('#hidden').hide();
+					$(this).animate({height:34},500,function(){});
+					$
+				});
+			});
+		</script>
 	</body>
 </html>

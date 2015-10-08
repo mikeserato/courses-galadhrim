@@ -39,6 +39,7 @@
 }
 .leafbar input{
 	font-size: 2rem;
+	width: 100%;
 }
 .navfix{
 	height: 50px;
