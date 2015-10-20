@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
 		<script src="../resources/js/bootstrap.js"></script>
 	</head>
-	<body>
+	<body class="blue-grey lighten-5">
 		
 		<table style="display:none;">
 			<tr>
@@ -22,87 +22,11 @@
 			</tr>
 		</table>
 		
-		<div class="navbar-fixed">
-			<nav class="green lighten-4 navbar">
-				<div class="container">
-					<div class="nav-wrapper">
-					
-					  <a href="#!" class="brand-logo center green-text text-lighten-1"><span class="glyphicon glyphicon-leaf"></span></a>
-					  <!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>-->
-					  
-					  <!--  -->
-					  <ul class="left hide-on-med-and-down navfix">
-						<li class="active"><a href="../pages/Home.html" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="../pages/Notifications.html" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-						<li><a href="#" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
-					  </ul>
-					  
-					  <ul class="left hide-on-large-only navfix">
-						<li><a href="../pages/Home.html" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="../pages/Notifications.html" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-					  </ul>
-					  
-					  <ul class="right hide-on-large-only rightnav">
-						<li><a href="#" class="blue-grey-text text-darken-4"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
-						<!-- Dropdown Trigger -->
-						<li id="dp" class="dropdown dp-menu">
-								<img src="../resources/images/dog.jpg" alt="IMAGE" width="40" height="40" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<ul class="dropdown-menu">
-									<li><a href="Profile.html"> Profile Name <p><small> View Profile </small></p></a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Lists </a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Help </a></li>
-									<li><a href="#"> Keyboard Shortcuts </a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Settings </a></li>
-									<li><a href="#"> Log out </a></li>
-								</ul>
-						</li>
-					  </ul>
-					  <ul class="side-nav" id="mobile-demo">
-						<li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
-					  </ul>
-					  
-					  <!--  -->
-					  <ul class="right hide-on-med-and-down rightnav">
-						<!-- Dropdown Trigger -->
-						<li id="dp" class="dropdown dp-menu">
-								<img src="../resources/images/dog.jpg" alt="IMAGE" width="40" height="40" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<ul class="dropdown-menu">
-									<li><a href="#"> Profile Name <p><small> View Profile </small></p></a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Lists </a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Help </a></li>
-									<li><a href="#"> Keyboard Shortcuts </a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#"> Settings </a></li>
-									<li><a href="#"> Log out </a></li>
-								</ul>
-						</li>
-						<li><a class="waves-effect waves-light btn green lighten-1" id="postBtn">Leafit <span class="glyphicon glyphicon-edit"></span></a></li>
-					  </ul>
-					  <ul class="side-nav" id="mobile-demo">
-						<li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
-					  </ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-			
-		<div class="container">
-			<div class="section">
-				<div class="row"> 
-				
-					<!-- Information Panel -->
-					<div class="col s12 m4 l3">
-						<!-- Mini Background -->
-						<div class="card green lighten-4">
+		<header class="blue-grey lighten-5">
+			<div class="sidenav">
+				<ul id="slide-out" class="side-nav fixed cyan darken-1">
+					<li>
+						<div class="card">
 							<div class="card-image">
 								<img src="../resources/images/bg.jpg">
 							</div>
@@ -142,159 +66,225 @@
 								</tbody>
 							</table>
 						</div>
-						
-						<!-- Trends Panel -->
-						<div class="card green lighten-4 s2 hide-on-small-only">
-							<p> <h4>Trends</h4><a href="#">#Naruto</a><br><a href="#">9gag</a><br><a href="#">#NoWay</a><br><a href="#">NeverAgain</a><br><a href="#">Trend</a> </p>
-						</div>
-						
-						<!-- Who to Follow Panel that shows only when resized for medium devices -->
-						<div class="card green lighten-4 hide-on-large-only hide-on-small-only">
-							<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
-							<ul class="collection">
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm1.jpg" class="circle">
-								  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm2.jpg" class="circle">
-								  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm3.jpg" class="circle">
-								  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-							</ul>
-						</div>
-						<!-- Masthead Panel that shows only when resized for medium devices -->
-						<div class="card green lighten-4 hide-on-large-only hide-on-small-only">
-							<p id="masthead">2015 Leafer ACSS Exercise</p>
-						</div>
-					</div>
+					</li>
+					<li><a href="#!" class="grey-text text-lighten-4">First Sidebar Link</a></li>
+					<li><a href="#!" class="grey-text text-lighten-4">Second Sidebar Link</a></li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</header>
+		
+		<main class="blue-grey lighten-5">
+			<div class="container">
+				<div class="section">
+					<div class="row"> 
 					
-					<!-- Leafs panel -->
-					<div class="col s12 m7 l6">
-						<!-- Leafbar panel -->
-						<div class="card green lighten-1 leafbar">
-							<div class="row">
-								<form class="col s12">
-									<div class="row">
-										<div class="col s1" id="leafbar-dp">
-											<img src="../resources/images/dog.jpg" alt="IMAGE">
-										</div>
-										<div class="input-field col s10" id="leafbar-info">
-											<input id="post" placeholder="What's happening?" type="textbox" class="validate green lighten-4" maxlength= "140">
-										</div>
+						<!-- Information Panel -->
+						<div class="col s12 m4 l3">
+							<!-- Mini Background -->
+							<div class="card green lighten-4">
+								<div class="card-image">
+									<img src="../resources/images/bg.jpg">
+								</div>
+								<!-- DP and Name -->
+								<div class="row nomargin-bot">
+									<div class="col s2 m2">
+										<img src="../resources/images/dog.jpg">
 									</div>
-									<div id="hidden">
-										<a class="waves-effect waves-light btn green lighten-4 blue-grey-text text-darken-4" id="postBtn" style="left: 400px; bottom: 15px;">Leafit <span class="glyphicon glyphicon-edit"></span></a>
+									<div class="col s8 m8 offset-s2 offset-m2" id="info"> 
+										<h4 class="blue-grey-text text-darken-4 flow-text"><b>Doge Dogeson</b></h4>
+										<h6 class="blue-grey-text text-darken-4 flow-text">@WowSoPunny</h6>
 									</div>
-								</form>
+								</div>
+								<!-- Statistics -->
+								<table class="info">
+									<tbody>
+										<tr>
+											<td id="fix">
+												<a href="#">
+													<p class="blue-grey-text text-darken-4 flow-text">TWEETS</p>
+													<h6 class="green-text text-lighten-1 flow-text">9,999</h6>
+												</a>
+											</td>
+											<td>
+												<a href="#">
+													<p class="blue-grey-text text-darken-4 flow-text">FOLLOWING</p>
+													<h6 class="green-text text-lighten-1 flow-text">9,999</h6>
+												</a>
+											</td>
+											<td>
+												<a href="#">
+													<p class="blue-grey-text text-darken-4 flow-text">FOLLOWERS</p>
+													<h6 class="green-text text-lighten-1 flow-text">9,999</h6>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Trends Panel -->
+							<div class="card green lighten-4 s2 hide-on-small-only">
+								<p> <h4>Trends</h4><a href="#">#Naruto</a><br><a href="#">9gag</a><br><a href="#">#NoWay</a><br><a href="#">NeverAgain</a><br><a href="#">Trend</a> </p>
+							</div>
+							
+							<!-- Who to Follow Panel that shows only when resized for medium devices -->
+							<div class="card green lighten-4 hide-on-large-only hide-on-small-only">
+								<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
+								<ul class="collection">
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm1.jpg" class="circle">
+									  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm2.jpg" class="circle">
+									  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm3.jpg" class="circle">
+									  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+								</ul>
+							</div>
+							<!-- Masthead Panel that shows only when resized for medium devices -->
+							<div class="card green lighten-4 hide-on-large-only hide-on-small-only">
+								<p id="masthead">2015 Leafer ACSS Exercise</p>
 							</div>
 						</div>
 						
-						<!-- Hardcoded Tweets --> 
-						<div class="card-panel green lighten-4"> 
-							<ul class="collection" id="leaves">
-								<li class="collection-item avatar green lighten-4">
-									<img src="../resources/images/dog.jpg" class="circle">
-									<span class="title"><b>Doge Dogeson</b>@WowSoPunny</span>
-									<p>Welcome to Leafer! Have fun using the app!<br/><br/>
-										<table class="info">
-											<tbody>
-												<tr>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-													<td>
-														<a href="#">
-															<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
-														</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</p>
-								</li>
-							</ul>
-						</div>
+						<!-- Leafs panel -->
+						<div class="col s12 m7 l6">
+							<!-- Hardcoded Tweets --> 
+							<div class="card-panel green lighten-4"> 
+								<ul class="collection" id="leaves">
+									<li class="collection-item avatar green lighten-4">
+										<img src="../resources/images/dog.jpg" class="circle">
+										<span class="title"><b>Doge Dogeson</b>@WowSoPunny</span>
+										<p>Welcome to Leafer! Have fun using the app!<br/><br/>
+											<table class="info">
+												<tbody>
+													<tr>
+														<td>
+															<a href="#">
+																<span class="glyphicon glyphicon-share-alt blue-grey-text text-darken-4" aria-hidden="true"></span>
+															</a>
+														</td>
+														<td>
+															<a href="#">
+																<span class="glyphicon glyphicon-refresh blue-grey-text text-darken-4" aria-hidden="true"></span>
+															</a>
+														</td>
+														<td>
+															<a href="#">
+																<span class="glyphicon glyphicon-heart blue-grey-text text-darken-4" aria-hidden="true"></span>
+															</a>
+														</td>
+														<td>
+															<a href="#">
+																<span class="glyphicon glyphicon-option-horizontal blue-grey-text text-darken-4" aria-hidden="true"></span>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</p>
+									</li>
+								</ul>
+							</div>
+							
+							<!-- Trends Panel that shows only on small devices -->
+							<div class="card green lighten-4 s2 hide-on-large-only hide-on-med-only">
+								<p> <h4>Trends</h4><a href="#">#Naruto</a><br><a href="#">9gag</a><br><a href="#">#NoWay</a><br><a href="#">NeverAgain</a><br><a href="#">Trend</a> </p>
+							</div>
+							
+							<!-- Who to follow Panel that shows only on small devices -->
+							<div class="card green lighten-4 hide-on-large-only hide-on-med-only">
+								<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
+								<ul class="collection">
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm1.jpg" class="circle">
+									  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm2.jpg" class="circle">
+									  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm3.jpg" class="circle">
+									  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+								</ul>
+							</div>
 						
-						<!-- Trends Panel that shows only on small devices -->
-						<div class="card green lighten-4 s2 hide-on-large-only hide-on-med-only">
-							<p> <h4>Trends</h4><a href="#">#Naruto</a><br><a href="#">9gag</a><br><a href="#">#NoWay</a><br><a href="#">NeverAgain</a><br><a href="#">Trend</a> </p>
-						</div>
-						
-						<!-- Who to follow Panel that shows only on small devices -->
-						<div class="card green lighten-4 hide-on-large-only hide-on-med-only">
-							<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
-							<ul class="collection">
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm1.jpg" class="circle">
-								  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm2.jpg" class="circle">
-								  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm3.jpg" class="circle">
-								  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-							</ul>
-						</div>
-					</div>
-					
-					<!-- Who to follow Panel -->
-					<div class="col s12 m3 l3 people">
-						<div class="card green lighten-4 hide-on-med-and-down">
-							<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
-							<ul class="collection">
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm1.jpg" class="circle">
-								  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm2.jpg" class="circle">
-								  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-								<li class="collection-item avatar green lighten-4">
-								  <img src="../resources/images/sm3.jpg" class="circle">
-								  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
-									<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
-								</li>
-							</ul>
-						</div>
-						
-						<!-- Masthead Panel -->
-						<div class="card green lighten-4  hide_on-large-only hide-on-med-only">
-							<p id="masthead">2015 Leafer 127 Project</p>
+						<!-- Who to follow Panel -->
+						<div class="col s12 m3 l3 people">
+							<div class="card green lighten-4 hide-on-med-and-down">
+								<h4 class="flow-text" id="peoplepad">Who to follow <a href="#"><small>Refresh</small></a> - <a href="#"><small>View all</small></a></h4>
+								<ul class="collection">
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm1.jpg" class="circle">
+									  <span class="title flow-text"><b>Jane Doe</b>@jdoe</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm2.jpg" class="circle">
+									  <span class="title flow-text"><b>Altaria Wales</b>@altarianword</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+									<li class="collection-item avatar green lighten-4">
+									  <img src="../resources/images/sm3.jpg" class="circle">
+									  <span class="title flow-text"><b>John Nevermore</b>@neverJ</span>
+										<p><a class="waves-effect waves-light btn green lighten-5 blue-grey-text text-darken-4 flow-text" id="bttn">Follow</a></p>
+									</li>
+								</ul>
+							</div>
+							
+							<!-- Masthead Panel -->
+							<div class="card green lighten-4  hide_on-large-only hide-on-med-only">
+								<p id="masthead">2015 Leafer 127 Project</p>
+							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</main>
+		
+		<footer class="page-footer blue-grey lighten-5">
+			<div class="container">
+				<div class="row">
+
+				
+							<!-- Leafbar panel -->
+							<div class="card  cyan darken-1 leafbar">
+								<div class="row">
+									<form class="col s12">
+										<div class="row">
+											<div class="col s1" id="leafbar-dp">
+												<img src="../resources/images/dog.jpg" alt="IMAGE">
+											</div>
+											<div class="input-field col s10" id="leafbar-info">
+												<input id="post" placeholder="What's happening?" type="textbox" class="validate green lighten-4" maxlength= "140">
+											</div>
+										</div>
+										<div id="hidden">
+											<a class="waves-effect waves-light btn green lighten-4 blue-grey-text text-darken-4" id="postBtn" style="left: 400px; bottom: 15px;">Leafit <span class="glyphicon glyphicon-edit"></span></a>
+										</div>
+									</form>
+								</div>
+							</div>
+				</div>	
+			</div>
+		</footer>
 		<script>
 			$(document).ready(function(){
+				$('.page-footer').pushpin({bottom});
 				$('#hidden').hide();
 				$("#postBtn").click(function postLeaf(){
 					var counter = $('#leaves').length;
