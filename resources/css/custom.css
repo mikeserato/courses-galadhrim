@@ -1,0 +1,165 @@
+/* SIDENAV */
+
+  header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+	li.infocard{
+		padding-left: 0px;
+		padding-right: 0px;	
+	}
+	.infocard{		
+    margin-top: 0px;
+    margin-bottom: 0px;
+	}
+
+/*FOOTER*/
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+.leafbar{
+	height: 50px;
+}
+.leafbar img{
+	border: 2px solid #c8e6c9;
+	box-sizing: border-box;
+    border-radius: 6px;
+    margin: -30px 0 0 8px;
+    padding: 1px;
+    vertical-align: bottom;
+	position:relative;
+	height:40px; 
+	width:40px;
+}
+.leafbar input{
+	font-size: 2rem;
+	width: 100%;
+}
+#leafbar-dp{	
+    padding-left: 35px;
+    padding-top: 25px;
+}
+#leafbar-info{
+	padding-left: 45px;
+	font-size: 2rem;
+} 
+ 
+.nav-wrapper #dp{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.navbar{
+	height: 50px;
+}
+.navbar div{
+	height: 50px;
+}
+.nomargin-bot{
+	margin-bottom:0px;
+}
+.nomargin-bot img{
+	border: 2px solid #c8e6c9;
+	box-sizing: border-box;
+    border-radius: 6px;
+    margin: -30px 0 0 8px;
+    padding: 1px;
+    vertical-align: bottom;
+	position:relative;
+	height:86px; 
+	width:86px;
+	z-index: 1;
+}
+
+.navfix{
+	height: 50px;
+}
+.navfix li{
+	height: 50px;
+}
+.navfix a{
+	font-size: 100%;
+	height: 50px;
+}
+.rightnav{
+	height: 50px;
+}
+.rightnav img {
+	margin-bottom: 20px;
+}
+.rightnav a{
+	margin-bottom: 20px;
+}
+.rightnav li{
+	height: 50px;
+}
+.dp-menu li{
+    width: 150px;
+}
+.dp-menu a{
+	font-size: 14px;
+}
+.info p{
+	font-size: 1rem;
+	margin-bottom: 0px;
+}
+.info h6{
+	font-size: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.info #fix{
+    padding-left: 20px;
+}
+.collection{
+	border: 0px;
+}
+.trends h4{
+    padding-left: 15px;
+	margin-bottom: 0px;
+}
+.trends a{
+   padding-left: 15px;
+}
+.people small{
+	font-size: 1rem;
+}
+.people #peoplepad{
+    padding-left: 10px;
+}
+.people li{
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-left: 60px;
+    height: 50px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+}
+.people img{
+    left: 8px;
+    top: -1px;
+}
+.people #bttn{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-bottom-width: 0px;
+    height: 25px;
+}
+#masthead{
+    padding-left: 40px;
+}
+.notifmain{
+    padding-top: 5px;
+}
