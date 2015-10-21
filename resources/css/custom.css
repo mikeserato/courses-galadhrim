@@ -10,6 +10,15 @@
     }
   }
 
+	li.infocard{
+		padding-left: 0px;
+		padding-right: 0px;	
+	}
+	.infocard{		
+    margin-top: 0px;
+    margin-bottom: 0px;
+	}
+
 /*FOOTER*/
   body {
     display: flex;
