@@ -1,0 +1,39 @@
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+ul.nav-tabs li{
+	width:50%;
+}
+
+.active a{
+	background-color:#800000 !important;
+	color: white !important;
+}
+
+#header{
+	margin:0px;
+	background-color: #228b22;
+}
+
+.tab-content{
+	margin-top: 20px;
+}
+
+input[type]{
+	width: 50%;
+}
+
+#header h1{
+	color: white;
+}
+
+body{
+	background-color: #DDD;
+}
+
+#navtabs li{
+	background-color: white;
+}

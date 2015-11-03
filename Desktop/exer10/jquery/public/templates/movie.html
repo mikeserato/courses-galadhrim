@@ -1,0 +1,7 @@
+<div class="movie">
+	<h4>${ title } (${ year })</h4>
+	<img src="${ imgURL }" />
+	<p class="classification"> ${ classification.join(" | ") } </p>
+	<p class="caption">${ description }</p>
+	<button onclick="add(${ JSON.stringify($item.data) })">Add to Watchlist</button>
+</div>

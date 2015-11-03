@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Betel de Robles" />
+		<title>Movies</title>
+		<script src="./data.js"></script>
+	</head>
+	<body>
+		<header> <h1>Movies</h1> </header>
+		<div id="content">
+			<!-- Movies -->
+			<ul id="movies"></ul>
+
+			<!-- Pagination -->
+			<ul id="pagination"></ul>
+
+			<a href="wishlist.html">Wishlist</a>
+		</div>
+
+		<script type="text/javascript">
+			window.onload = function(){
+				// identify how many pages are needed
+				var numOfPages = Math.ceil(movies.length / 3);
+
+				// wishlist
+				var wishlist = readCookie('exer9_wishlist');
+				console.log(wishlist);
+
+				// generate the pages in pagination
+				for(var i = 0; i < numOfPages; i++){
+					// create the a tag
+					var a = document.createElement('a');
+
+					a.setAttribute('href', '#');
+					a.setAttribute('class', 'page');
+					a.setAttribute('data-page', i + 1);
+					a.innerHTML = i + 1;
+
+					// set eventListener
+					a.addEventListener('click', (function(e){
+						e.preventDefault();
+						updateMovies(this.getAttribute('data-page'));
+					}).bind(a));
+
+					// create the li tag
+					var li = document.createElement('li');
+
+					// merge
+					li.appendChild(a);
+
+					// render on html
+					document.getElementById('pagination').appendChild(li);
+				}
+
+				// initialize page
+				updateMovies(1);
+
+				// function responsible for rendering the needed movies into the html, given a page number
+				function updateMovies(page){
+					// clear first the container
+					document.getElementById('movies').innerHTML = '';
+
+					// identify offset in array
+					// offset defines which index in the array data would be the first movie
+					var offset = page - 1 + ((page - 1) * 2);
+
+					// generate the elements from offset to offset + 3
+					for(var i = offset; i < offset + 3; i++){
+						if(movies[i]){
+							// label
+							var label = document.createElement('div');
+
+							label.innerHTML = movies[i].title + ' (' + movies[i].year + ')';
+
+							// img
+							var img = document.createElement('img');
+
+							img.setAttribute('src', movies[i].imgURL);
+
+							// desc
+							var desc = document.createElement('p');
+
+							desc.innerHTML = movies[i].description;
+
+							// rating
+							var rating = document.createElement('div');
+
+							rating.innerHTML = 'Rating: ' + movies[i].rating;
+
+							// genre
+							var genre = document.createElement('div');
+
+							genre.innerHTML = 'Genre: ';
+
+							movies[i].classification.forEach(function(classification, i){
+								genre.innerHTML += (i != 0? ', ': '') + classification;
+							});
+
+							// button
+							var button = document.createElement('button');
+
+							button.setAttribute('data-title', movies[i].title);
+
+							if(wishlist.indexOf(movies[i].title) == -1){
+								button.setAttribute('class', 'add-wishlist');
+								button.innerHTML = '+';
+
+								// set eventListener
+								button.addEventListener('click', (function(){
+									wishlist.push(this.getAttribute('data-title'));
+									createCookie(wishlist);
+
+									// modify button
+									this.setAttribute('class', 'remove-wishlist');
+									this.setAttribute('disabled', 'disabled');
+									this.innerHTML = '-';
+								}).bind(button));
+							}
+							else{
+								button.setAttribute('class', 'remove-wishlist');
+								button.innerHTML = '-';
+
+								// set eventListener
+								button.addEventListener('click', (function(){
+									var index = wishlist.indexOf(this.getAttribute('data-title'));
+
+									wishlist.splice(index, 1);
+									createCookie(wishlist);
+
+									// modify button
+									this.setAttribute('class', 'add-wishlist');
+									this.setAttribute('disabled', 'disabled');
+									this.innerHTML = '+';
+								}).bind(button));
+							}
+
+							// create the li tag
+							var li = document.createElement('li');
+
+							// merge
+							li.appendChild(label);
+							li.appendChild(img);
+							li.appendChild(desc);
+							li.appendChild(rating);
+							li.appendChild(genre);
+							li.appendChild(button);
+
+							// render on html
+							document.getElementById('movies').appendChild(li);
+						}
+					}
+				}
+
+				// creates a cookie
+				function createCookie(wishlist) {
+					var d = new Date();
+				    d.setTime(d.getTime() + (69*24*60*60*1000));
+				    var expires = d.toUTCString();
+				    
+					var array = JSON.stringify(wishlist);
+				    document.cookie = "exer9_wishlist=" + array + "; expires=" + expires + "; path=/";
+				}
+
+				// Read cookie
+				function readCookie(title) {
+				    var nameEQ = title + "=";
+				    var ca = document.cookie.split(';');
+				    for(var i=0;i < ca.length;i++) {
+				        var c = ca[i];
+				        while (c.charAt(0) === ' ') {
+				            c = c.substring(1,c.length);
+				        }
+				        if (c.indexOf(nameEQ) === 0) {
+				            return JSON.parse(c.substring(nameEQ.length,c.length));
+				        }
+				    }
+				    return [];
+				}
+
+				//references: http://www.w3schools.com/js/js_cookies.asp ; http://stackoverflow.com/questions/4825683/how-do-i-create-and-read-a-value-from-cookie
+			}
+		</script>
+	</body>
+</html>

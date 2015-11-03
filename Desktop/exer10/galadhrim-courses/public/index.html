@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LOGIN</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="assets/css/login.css" />
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<div class="jumbotron" id="header">
+			<h1 class="text-center"> Galadhrim </h1>
+		</div>
+
+		<div>
+			<ul class="nav nav-tabs" role="tablist" id="navtabs">
+				<li role="presentation" class="active" id="tabs1"><a href="#" id="signin" class="text-center">Sign in</a></li>
+				<li role="presentation" id="tabs2"><a href="#" id="signup" class="text-center">Sign up</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="col-sm-12 text-center tab-pane" role="tabpanel" id="signinDiv">
+					<form action="Degrees.html">
+						<div class="form-group">
+							<input type="text" id="userin" placeHolder="Username"/>
+						</div>
+						<div class="form-group">
+							<input type="password" id="passin" placeHolder="Password"/>
+						</div>
+						<input type="submit" value="Sign-in!" class="btn btn-success" />
+					</form>
+				</div>
+				<div class="col-sm-12 text-center tab-pane" role="tabpanel" id="signupDiv">
+					<form action="Degrees.html">
+						<div class="form-group">
+							<input type="text" id="email" placeHolder="E-mail Address"/>
+						</div>
+						<div class="form-group">
+							<input type="text" id="userup" placeHolder="Username"/>
+						</div>
+						<div class="form-group">
+							<input type="password" id="password" placeHolder="Password"/>
+						</div>
+						<div class="form-group">
+							<input type="password" id="cPassword" placeHolder="Confirm Password"/>
+						</div>
+						<input type="submit" value="Sign-up!" class="btn btn-success" />
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$('#signin').click(function() {
+				$('#signupDiv').hide();
+				$('#signinDiv').show();
+				$('#tabs1').attr("class", "active");
+				$('#tabs2').attr("class", "");
+			})
+			$('#signup').click(function() {
+				$('#signupDiv').show();
+				$('#signinDiv').hide();
+				$('#tabs1').attr("class", "");
+				$('#tabs2').attr("class", "active");
+			})
+
+			$('#signupDiv').hide();
+			$('#signinDiv').show();
+		</script>
+	</body>
+</html>

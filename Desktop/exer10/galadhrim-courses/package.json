@@ -1,0 +1,23 @@
+{
+  "name": "galadhrim-courses",
+  "version": "1.0.0",
+  "description": "lala",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megatricycle/galadhrim-courses.git"
+  },
+  "keywords": [
+    "courses",
+    "heroku"
+  ],
+  "author": "mikeserato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megatricycle/galadhrim-courses/issues"
+  },
+  "homepage": "https://github.com/megatricycle/galadhrim-courses#readme"
+}
