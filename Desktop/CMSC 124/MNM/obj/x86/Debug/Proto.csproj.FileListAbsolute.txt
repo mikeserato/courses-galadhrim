@@ -1,0 +1,10 @@
+C:\Users\mike\Desktop\proto alpha\Proto\Proto\bin\Debug\Proto.exe
+C:\Users\mike\Desktop\proto alpha\Proto\Proto\bin\Debug\Proto.pdb
+C:\Users\mike\Desktop\proto alpha\Proto\Proto\obj\x86\Debug\Proto.csprojResolveAssemblyReference.cache
+C:\Users\mike\Desktop\proto alpha\Proto\Proto\obj\x86\Debug\Proto.exe
+C:\Users\mike\Desktop\proto alpha\Proto\Proto\obj\x86\Debug\Proto.pdb
+C:\Users\mike\Desktop\CMSC 124\proto alpha\Proto\Proto\bin\Debug\Proto.exe
+C:\Users\mike\Desktop\CMSC 124\proto alpha\Proto\Proto\bin\Debug\Proto.pdb
+C:\Users\mike\Desktop\CMSC 124\proto alpha\Proto\Proto\obj\x86\Debug\Proto.csprojResolveAssemblyReference.cache
+C:\Users\mike\Desktop\CMSC 124\proto alpha\Proto\Proto\obj\x86\Debug\Proto.exe
+C:\Users\mike\Desktop\CMSC 124\proto alpha\Proto\Proto\obj\x86\Debug\Proto.pdb

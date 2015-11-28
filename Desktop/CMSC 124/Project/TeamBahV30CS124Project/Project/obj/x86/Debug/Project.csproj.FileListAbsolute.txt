@@ -1,0 +1,64 @@
+C:\Users\kath\Desktop\Project\Project\bin\Debug\Project.exe
+C:\Users\kath\Desktop\Project\Project\bin\Debug\Project.pdb
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\Project.exe
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\Project.pdb
+C:\Users\kath\Desktop\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\Project.exe
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\Project.pdb
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Gani Marquez\Desktop\124\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\Gani Marquez\Desktop\124\Project\Project\bin\Debug\Project.exe
+C:\Users\Gani Marquez\Desktop\124\Project\Project\bin\Debug\Project.pdb
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\Project.exe
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\Project.pdb
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\bin\Debug\Project.exe
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\bin\Debug\Project.pdb
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\Project.exe
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\Project.pdb
+C:\Users\arjie\Downloads\Project\Project\bin\Debug\Project.exe
+C:\Users\arjie\Downloads\Project\Project\bin\Debug\Project.pdb
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\arjie\Downloads\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+G:\Project\Project\obj\x86\Debug\Project.exe
+G:\Project\Project\obj\x86\Debug\Project.pdb
+I:\Project\Project\obj\x86\Debug\Project.exe
+I:\Project\Project\obj\x86\Debug\Project.pdb
+I:\Project\Project\bin\Debug\Project.exe
+I:\Project\Project\bin\Debug\Project.pdb
+I:\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+I:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+I:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+I:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+I:\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\Project.exe
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\Project.pdb
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Gani Marquez\Desktop\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\Gani Marquez\Desktop\Project\Project\bin\Debug\Project.exe
+C:\Users\Gani Marquez\Desktop\Project\Project\bin\Debug\Project.pdb
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+E:\Project\Project\obj\x86\Debug\Project.exe
+E:\Project\Project\obj\x86\Debug\Project.pdb
+E:\Project\Project\bin\Debug\Project.exe
+E:\Project\Project\bin\Debug\Project.pdb
+E:\Project\Project\obj\x86\Debug\Project.csprojResolveAssemblyReference.cache
+E:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+E:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form2.resources
+E:\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Project\Project\obj\x86\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form3.resources
+C:\Users\Gani Marquez\Documents\Visual Studio 2010\Projects\Project\Project\obj\x86\Debug\WindowsFormsApplication1.Form4.resources
